@@ -8,16 +8,19 @@
 
 本地 Agent 跑着任务，你不必一直守在工位。离开电脑后，用手机查看进度、追加指令，或在已授权的终端中执行命令；任务仍在原来的电脑上运行。
 
-Ping4U 按项目组织 Claude Code、Codex、OpenCode 和终端会话。Agent 与 Shell 运行在你的 **Host 电脑**上，配对后的手机可以发起新任务，也可以继续已有会话。内置可选的 **Routing（模型路由与多账号管理）**，用于为受支持的工具配置账号与模型。
+Ping4U 把多个编码 Agent 和终端会话组织进同一个项目工作区。Agent 与 Shell 运行在你的 **Host 电脑**上，配对后的手机可以发起新任务，也可以继续已有会话。内置可选的 **Routing（模型路由与多账号管理）**，用于为受支持的工具配置账号与模型。
 
 [下载](https://ping4u.cc/downloads) · [官网](https://ping4u.cc/) · [快速开始](docs/getting-started.md) · [English](README.md)
 
 **支持平台：** 桌面 Host 为 macOS / Windows；移动客户端为 iOS / Android。安装方式与可下载版本见[下载页](https://ping4u.cc/downloads)。
 
+**Agent 接入：** Claude Code · Codex · OpenCode · Pi · WorkBuddy · DeepSeek Harness
+
 ## 为什么用 Ping4U
 
 - **Rust + GPUI 桌面工作空间。** 桌面主界面使用 Rust 编写，编译为原生代码，由 GPUI 渲染；部分管理页面使用系统 WebView。
-- **macOS 下载包 58.5 MB。** Apple Silicon v0.19.0 的 DMG 大小为 58,488,173 字节。这是压缩安装包大小，安装后占用另计；其他平台与后续版本以[下载页](https://ping4u.cc/downloads)为准。
+- **macOS 下载包 58.5 MB。** Apple Silicon v0.19.0，DMG 格式。[下载安装 →](https://ping4u.cc/downloads)
+- **6 种 Agent，同一个工作区。** 按项目管理不同工具的会话和终端，复用本机已有的 Agent 配置。
 - **离开工位，继续同一个任务。** 手机配对后可查看进度、追加指令或操作已授权的终端，继续使用 Host 上的项目文件、工具和环境。
 - **免费使用，软件与中继均不收费。** 模型调用仍使用你自己的供应商账号，额度与费用由该账号承担。
 
@@ -66,7 +69,7 @@ flowchart LR
 
 | 部分 | 实际行为 |
 |---|---|
-| Agent | 接入 Claude Code、Codex、OpenCode 等工具；版本与功能支持取决于当前发行版，可在「Agent 管理」中检查。 |
+| Agent | 接入 Claude Code、Codex、OpenCode、Pi、WorkBuddy、DeepSeek Harness；版本与功能支持取决于当前发行版，可在「Agent 管理」中检查。 |
 | 上下文 | 继续原会话可以保留该对话；新建会话或切换 Agent，各有独立上下文。 |
 | 终端 | Shell 在 Host 上运行，使用电脑的文件、工具和环境；手机输入需要 Host 授予对应权限。 |
 | 模型接入 | 使用已配置的供应商，或兼容的 Routing 接入。Agent 登录、供应商额度和模型费用仍分别适用。 |

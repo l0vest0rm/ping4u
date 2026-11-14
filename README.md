@@ -8,16 +8,19 @@
 
 When a local agent is working through a task, you can step away from your desk. Use your phone to check progress, send a follow-up, or run a command in a terminal you've been granted access to. The task keeps running on the same computer.
 
-Ping4U groups Claude Code, Codex, OpenCode, and terminal sessions by project. Agents and shells run on your **host machine**. Pair a phone to start new tasks or resume existing sessions. Enable **Routing** if you want to manage multiple accounts and configure model access for supported tools.
+Ping4U brings coding agents and terminal sessions into a shared project workspace. Agents and shells run on your **host machine**. Pair a phone to start new tasks or resume existing sessions. Enable **Routing** if you want to manage multiple accounts and configure model access for supported tools.
 
 [Download](https://ping4u.cc/downloads) · [Website](https://ping4u.cc/) · [Getting started](docs/getting-started.md) · [中文](README.zh-CN.md)
 
 **Platforms:** macOS and Windows hosts; iOS and Android clients. See [Downloads](https://ping4u.cc/downloads) for installation options and available releases.
 
+**Agent integrations:** Claude Code · Codex · OpenCode · Pi · WorkBuddy · DeepSeek Harness
+
 ## Why Ping4U
 
 - **A Rust + GPUI desktop workspace.** The main desktop interface is written in Rust, compiled to native code, and rendered with GPUI. Some management pages use the system WebView.
-- **A 58.5 MB macOS download.** The v0.19.0 Apple Silicon DMG is 58,488,173 bytes. This is the compressed installer size; installed disk usage differs. See [Downloads](https://ping4u.cc/downloads) for other platforms and newer versions.
+- **A 58.5 MB macOS download.** v0.19.0 for Apple Silicon, packaged as a DMG. [Download →](https://ping4u.cc/downloads)
+- **Six agents in one workspace.** Organize conversations and terminals by project, using your existing local agent configurations.
 - **Step away and keep working on the same task.** Pair your phone to check progress, send a follow-up, or use an authorized terminal with the project files, tools, and environment on your host.
 - **Free to use, with no software or relay fees.** Model requests use your own provider account. Its quotas and charges still apply.
 
@@ -66,7 +69,7 @@ flowchart LR
 
 | Area | What to expect |
 |---|---|
-| Agents | Integrations include Claude Code, Codex, and OpenCode. Supported versions and features depend on the installed release. Check Agent Management. |
+| Agents | Integrations include Claude Code, Codex, OpenCode, Pi, WorkBuddy, and DeepSeek Harness. Supported versions and features depend on the installed release. Check Agent Management. |
 | Session context | Resume an existing session to keep its conversation. New sessions and sessions with a different agent have separate context. |
 | Terminal | The shell runs on the host and uses its files, tools, and environment. Entering commands from a phone requires permission from the host. |
 | Model access | Use the agent's configured provider or a compatible Routing connection. Agent sign-in requirements, provider limits, and model charges still apply. |
