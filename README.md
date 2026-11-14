@@ -10,7 +10,7 @@ Ping4U brings coding-agent sessions and real terminals into a project workspace.
 
 ![Ping4U desktop, Routing and phone workflow](assets/ping4u-preview.gif)
 
-*A 15-second edited preview from the existing product demo. [Watch the full 60-second video](assets/ping4u-demo.mp4). The recording illustrates a workflow; available versions and platform support may differ.*
+*See the desktop, Routing and phone workflow in this 15-second preview. [Watch the full 60-second demo](assets/ping4u-demo.mp4).*
 
 ## What you can do
 
@@ -37,12 +37,12 @@ See the [setup guide](docs/getting-started.md) for details.
 
 ## Where work runs
 
-Agents and terminal processes run on the Host. Your phone is a client of that workspace. The Host service and network connection must remain available for remote work; a powered-off or sleeping computer cannot be treated as an always-on cloud worker.
+Agents and terminal processes run on the Host. Your phone is a client of that workspace. Keep the Host computer awake, its service running and its network connected for remote access.
 
 An agent may send prompts, relevant code and tool output to its configured model provider. Encrypted phone-to-Host transport does not make those separate model requests private from that provider. Read the [privacy and security notes](docs/privacy-security.md).
 
 ## About this repository
 
-Ping4U is a closed-source product. This repository contains product documentation and demonstration media, not the application's source code. Public documentation does not make the application open source.
+This is the official repository for Ping4U product documentation and demos. Ping4U is a closed-source application.
 
-For a reproducible problem report, include the Ping4U version, Host and phone operating systems, agent version, steps and observed result. Remove credentials, pairing codes, private code and personal information before sharing logs or screenshots. Do not post vulnerability details in a public issue.
+[Open an issue](https://github.com/l0vest0rm/ping4u/issues) to report a problem or suggest an improvement. For a problem report, include the Ping4U version, Host and phone operating systems, agent version, steps and observed result. Remove credentials, pairing codes, private code and personal information before sharing logs or screenshots. Do not post vulnerability details in a public issue.
