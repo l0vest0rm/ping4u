@@ -33,7 +33,7 @@ Ping4U 把编程 Agent 会话和真实终端按项目组织在一起。你可以
 3. 选择项目与受支持的 Agent，发起任务；有需要时配置 Routing。
 4. 需要手机访问时，从下载页安装对应移动端，通过「手机连接」完成配对。
 
-详细步骤见[快速开始](docs/getting-started.md)和 [OpenCode 说明](docs/opencode.md)。
+详细步骤见[快速开始](docs/getting-started.md)。
 
 ## 工作在哪里运行
 

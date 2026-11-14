@@ -33,7 +33,7 @@ Each agent session has its own context. Switching agents does not automatically 
 3. Select a project and a supported agent, then start a task. Configure Routing if you need it.
 4. Optionally install the mobile app from the download page and pair it through Phone Connection.
 
-See the [setup guide](docs/getting-started.md) and [OpenCode notes](docs/opencode.md) for details.
+See the [setup guide](docs/getting-started.md) for details.
 
 ## Where work runs
 
