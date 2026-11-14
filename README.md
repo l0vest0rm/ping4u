@@ -2,47 +2,72 @@
 
 # Ping4U
 
-**Your agents. Your models. One workspace.**
+**Coding agents and terminals. On your machine. From your desk or your phone.**
 
-Ping4U brings coding-agent sessions and real terminals into a project workspace. Work on your computer, or connect your phone to start and continue work on the same Host. Optional Routing manages account and model connections for supported tools.
+Ping4U organizes Claude Code, Codex, OpenCode and terminal sessions by project. Agents and shells run on your **Host computer**. A paired phone lets you start new work or continue an existing session. Optional **Routing** manages account and model connections for supported tools.
 
-[Website](https://ping4u.cc/) · [Downloads](https://ping4u.cc/downloads) · [Getting started](docs/getting-started.md) · [Privacy & security](docs/privacy-security.md) · [简体中文](README.zh-CN.md)
+[Download](https://ping4u.cc/downloads) · [Website](https://ping4u.cc/) · [Getting started](docs/getting-started.md) · [简体中文](README.zh-CN.md)
 
-![Ping4U desktop, Routing and phone workflow](assets/ping4u-preview.gif)
+## See it in action
 
-*See the desktop, Routing and phone workflow in this 15-second preview. [Watch the full 60-second demo](assets/ping4u-demo.mp4).*
+![Desktop agent sessions, Routing configuration and phone access in Ping4U](assets/ping4u-preview.gif)
 
-## What you can do
+The demo moves from a desktop coding session through Routing configuration to a phone follow-up on a webpage change. The phone sends the next instruction; the agent still runs on the Host.
 
-- **Organize work by project.** Keep coding-agent sessions and terminals accessible from one workspace.
-- **Choose a coding agent.** Integrations include Claude Code, Codex and OpenCode, subject to the supported versions and capabilities in your installed release.
-- **Use a real terminal.** Commands run on your Host computer, in its project directories and environment.
-- **Connect a phone when needed.** Start a session, continue a conversation or use an authorized terminal on the Host. Desktop use does not require a phone.
-- **Configure model access with Routing.** Manage supported accounts and models for compatible tools. Routing is optional; configuration support varies by tool and provider.
+[Watch the full 60-second demo](assets/ping4u-demo.mp4). The GIF is a 15-second edit of three workflow segments.
 
-## A typical workflow
+## Start with one project
 
-Open a project, ask one agent to review a change, and use another session for implementation. Open a terminal for commands when needed. Away from your desk, connect your phone and continue a Ping4U-managed session on the Host.
+1. **[Install Ping4U](https://ping4u.cc/downloads)** on your computer and sign in.
+2. **Check Agent Management.** Select an installed, authenticated agent supported by your Ping4U release.
+3. **Open a project and create a session.** Try: `Explain this project's directory structure. Do not change files.`
+4. **Open a terminal** in the project when you need shell commands, build output or a test run. Check the working directory before executing commands.
+5. **Continue from your phone, optionally.** Install the mobile app, generate a code in desktop **Phone Connection**, enter it on the phone, and approve the device on the Host. Open the session you just created and send a follow-up.
 
-Each agent session has its own context. Switching agents does not automatically transfer a conversation or share its history.
+Already have a working agent configuration? Start there. Configure Routing when you need to manage supported accounts and models. [Full setup guide →](docs/getting-started.md)
 
-## Start here
+## How it works
 
-1. [Download Ping4U](https://ping4u.cc/downloads) for your computer and follow the installation instructions.
-2. Open Ping4U, complete sign-in, and check your installed tools in Agent Management.
-3. Select a project and a supported agent, then start a task. Configure Routing if you need it.
-4. Optionally install the mobile app from the download page and pair it through Phone Connection.
+```mermaid
+flowchart LR
+    Phone["Phone client"] <-->|"WebRTC / DTLS"| Host["Host service"]
+    subgraph Computer["Your computer"]
+        Desktop["Desktop workspace"] <--> Host
+        Host <--> Agents["Agent sessions"]
+        Host <--> Terminal["Terminal / shell"]
+        Agents --> Routing["Routing — optional"]
+    end
+    Agents -->|"Configured model requests"| Provider["Model provider"]
+    Routing --> Provider
+```
 
-See the [setup guide](docs/getting-started.md) for details.
+**Execution stays on the Host.** The project directory, agent processes and shells live on your computer. The phone sends actions and receives conversation content or terminal state. Keep the Host awake, connected and running for remote access.
 
-## Where work runs
+**Agent sessions and terminals are separate ways to work.** Use an agent conversation for a coding task and a terminal for shell commands. A project groups that work; it does not merge the agents' conversation histories.
 
-Agents and terminal processes run on the Host. Your phone is a client of that workspace. Keep the Host computer awake, its service running and its network connected for remote access.
+**Routing is optional.** It configures model access for compatible tools. Model requests may go to the agent's configured provider directly or through Routing. Applying a configuration and completing a model request are separate steps.
 
-An agent may send prompts, relevant code and tool output to its configured model provider. Encrypted phone-to-Host transport does not make those separate model requests private from that provider. Read the [privacy and security notes](docs/privacy-security.md).
+## Integrations and boundaries
 
-## About this repository
+| Area | What to expect |
+|---|---|
+| Agents | Claude Code, Codex and OpenCode integrations; supported versions and features depend on the installed release. Check Agent Management. |
+| Context | Continue the original session to keep its conversation. A new session or a different agent has its own context. |
+| Terminal | A shell running on the Host, using its files, tools and environment. Phone input requires the corresponding Host permission. |
+| Model access | Use your configured provider or compatible Routing connections. Agent authentication, provider limits and model charges still apply. |
+| Remote access | Pair with the Host and approve access there. Phone connectivity does not move execution to the phone or keep a sleeping Host available. |
+| Source | Ping4U is closed source. This repository contains public documentation and demo media. |
 
-This is the official repository for Ping4U product documentation and demos. Ping4U is a closed-source application.
+## Privacy and security
 
-[Open an issue](https://github.com/l0vest0rm/ping4u/issues) to report a problem or suggest an improvement. For a problem report, include the Ping4U version, Host and phone operating systems, agent version, steps and observed result. Remove credentials, pairing codes, private code and personal information before sharing logs or screenshots. Do not post vulnerability details in a public issue.
+Phone-to-Host application traffic uses WebRTC with DTLS protection and signed signaling. Model requests are a separate connection: providers may receive prompts, relevant code and tool output. Ping4U also includes low-volume startup and usage analytics.
+
+Read [Privacy & security](docs/privacy-security.md) for connection metadata, local credential storage, analytics fields and controls, and the limits of transport encryption.
+
+## Docs and feedback
+
+- [Getting started](docs/getting-started.md) — agents, terminals, Routing and phone pairing.
+- [Privacy & security](docs/privacy-security.md) — data handling and trust boundaries.
+- [Issues](https://github.com/l0vest0rm/ping4u/issues) — bugs and feature requests.
+
+For a bug report, include Ping4U and agent versions, Host/phone operating systems, reproduction steps, and expected versus actual behavior. Remove credentials, pairing codes and private content from logs and screenshots. Do not publish vulnerability exploit details in a public issue.
