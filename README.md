@@ -2,6 +2,8 @@
 
 # Ping4U
 
+[![Rust + GPUI](https://img.shields.io/badge/Desktop-Rust_%2B_GPUI-DEA584?style=flat-square)](#why-ping4u) [![Free to use](https://img.shields.io/badge/Ping4U-Free_to_use-2EA043?style=flat-square)](https://ping4u.cc/downloads)
+
 **Run coding agents and terminals on your computer. Work from your desk or your phone.**
 
 When a local agent is working through a task, you can step away from your desk. Use your phone to check progress, send a follow-up, or run a command in a terminal you've been granted access to. The task keeps running on the same computer.
@@ -11,6 +13,13 @@ Ping4U groups Claude Code, Codex, OpenCode, and terminal sessions by project. Ag
 [Download](https://ping4u.cc/downloads) · [Website](https://ping4u.cc/) · [Getting started](docs/getting-started.md) · [中文](README.zh-CN.md)
 
 **Platforms:** macOS and Windows hosts; iOS and Android clients. See [Downloads](https://ping4u.cc/downloads) for installation options and available releases.
+
+## Why Ping4U
+
+- **A Rust + GPUI desktop workspace.** The main desktop interface is written in Rust, compiled to native code, and rendered with GPUI. Some management pages use the system WebView.
+- **A 58.5 MB macOS download.** The v0.19.0 Apple Silicon DMG is 58,488,173 bytes. This is the compressed installer size; installed disk usage differs. See [Downloads](https://ping4u.cc/downloads) for other platforms and newer versions.
+- **Step away and keep working on the same task.** Pair your phone to check progress, send a follow-up, or use an authorized terminal with the project files, tools, and environment on your host.
+- **Free to use, with no software or relay fees.** Model requests use your own provider account. Its quotas and charges still apply.
 
 ## See it in action
 
@@ -28,7 +37,7 @@ The demo starts with a coding session on the desktop, shows how to configure Rou
 4. **Open a terminal when you need a shell.** Run commands, inspect build output, or run tests. Check the working directory before running commands.
 5. **Continue from your phone when you need to.** Install the mobile app, generate a pairing code under **Phone Connection** on the desktop, enter it on the phone, and approve the device on the host. Open the session you started and send a follow-up.
 
-Signing in authenticates your Ping4U account, links your host to it, and lets Ping4U track relay usage for that account. Relays forward traffic when a direct peer-to-peer connection is restricted. Sign in to each agent and authorize model providers separately.
+Signing in authenticates your Ping4U account, binds devices to it, and manages relay connections. Relays forward traffic when a direct peer-to-peer connection is restricted. Ping4U does not charge relay fees. Sign in to each agent and authorize model providers separately.
 
 If your agent is already configured, you can start with that setup. Enable Routing when you need to manage accounts and models. [Read the full setup guide →](docs/getting-started.md)
 
@@ -75,5 +84,7 @@ See [Privacy & security](docs/privacy-security.md) for details on connection met
 - [Getting started](docs/getting-started.md): Agents, terminals, Routing, and phone pairing.
 - [Privacy & security](docs/privacy-security.md): Data handling and trust boundaries.
 - [Issues](https://github.com/l0vest0rm/ping4u/issues): Bug reports and feature requests.
+
+Star this repository to find it again when you're ready to try Ping4U. Share bugs and feature requests in Issues.
 
 When reporting a bug, include your Ping4U and agent versions, host and phone operating systems, steps to reproduce, and what you expected versus what happened. Remove credentials, pairing codes, and private content from logs and screenshots. Do not publish vulnerability exploit details in public issues.

@@ -2,6 +2,8 @@
 
 # Ping4U
 
+[![Rust + GPUI](https://img.shields.io/badge/Desktop-Rust_%2B_GPUI-DEA584?style=flat-square)](#为什么用-ping4u) [![免费使用](https://img.shields.io/badge/Ping4U-免费使用-2EA043?style=flat-square)](https://ping4u.cc/downloads)
+
 **Agent 和终端在你的电脑上运行，电脑、手机都能继续工作。**
 
 本地 Agent 跑着任务，你不必一直守在工位。离开电脑后，用手机查看进度、追加指令，或在已授权的终端中执行命令；任务仍在原来的电脑上运行。
@@ -11,6 +13,13 @@ Ping4U 按项目组织 Claude Code、Codex、OpenCode 和终端会话。Agent �
 [下载](https://ping4u.cc/downloads) · [官网](https://ping4u.cc/) · [快速开始](docs/getting-started.md) · [English](README.md)
 
 **支持平台：** 桌面 Host 为 macOS / Windows；移动客户端为 iOS / Android。安装方式与可下载版本见[下载页](https://ping4u.cc/downloads)。
+
+## 为什么用 Ping4U
+
+- **Rust + GPUI 桌面工作空间。** 桌面主界面使用 Rust 编写，编译为原生代码，由 GPUI 渲染；部分管理页面使用系统 WebView。
+- **macOS 下载包 58.5 MB。** Apple Silicon v0.19.0 的 DMG 大小为 58,488,173 字节。这是压缩安装包大小，安装后占用另计；其他平台与后续版本以[下载页](https://ping4u.cc/downloads)为准。
+- **离开工位，继续同一个任务。** 手机配对后可查看进度、追加指令或操作已授权的终端，继续使用 Host 上的项目文件、工具和环境。
+- **免费使用，软件与中继均不收费。** 模型调用仍使用你自己的供应商账号，额度与费用由该账号承担。
 
 ## 看一次实际操作
 
@@ -28,7 +37,7 @@ Ping4U 按项目组织 Claude Code、Codex、OpenCode 和终端会话。Agent �
 4. **需要命令时打开终端。** 在项目中运行 Shell 命令、查看构建输出或执行测试；执行前先确认当前目录。
 5. **需要时从手机继续。** 安装手机 App，在桌面「手机连接」中生成配对码，手机输入后由 Host 确认设备。打开刚才的会话，追加一条指令。
 
-Ping4U 登录用于账号认证、设备绑定及中继连接（P2P 直连受限时的转发）用量统计；各 Agent 的登录与模型供应商授权仍需分别完成。
+Ping4U 登录用于账号认证、设备绑定和中继连接管理。P2P 直连受限时，中继服务负责转发流量，Ping4U 不收取中继费用。各 Agent 的登录与模型供应商授权仍需分别完成。
 
 已有可用的 Agent 配置，可以直接开始。有账号与模型管理需求时再配置 Routing。[查看完整使用指南 →](docs/getting-started.md)
 
@@ -75,5 +84,7 @@ flowchart LR
 - [快速开始](docs/getting-started.md)：Agent、终端、Routing 与手机配对。
 - [隐私与安全](docs/privacy-security.md)：数据处理范围与信任边界。
 - [Issues](https://github.com/l0vest0rm/ping4u/issues)：问题反馈与功能建议。
+
+想稍后试用，可以 Star 收藏本仓库。试用后的问题与建议欢迎提交到 Issues。
 
 报告问题时，请附上 Ping4U 和 Agent 版本、电脑与手机系统、复现步骤、预期结果和实际结果。日志和截图中请移除密钥、配对码与私有内容，不要在公开 Issue 中发布安全漏洞利用细节。
