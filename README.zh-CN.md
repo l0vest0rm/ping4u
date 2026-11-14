@@ -4,9 +4,13 @@
 
 **Agent 和终端在你的电脑上运行，电脑、手机都能继续工作。**
 
-Ping4U 按项目组织 Claude Code、Codex、OpenCode 和终端会话。Agent 与 Shell 运行在你的 **Host 电脑**上，配对后的手机可以发起新任务，也可以继续已有会话。需要管理模型接入时，通过可选的 **Routing** 配置受支持的账号、模型和工具。
+本地 Agent 跑着任务，你不必一直守在工位。离开电脑后，用手机查看进度、追加指令，或在已授权的终端中执行命令；任务仍在原来的电脑上运行。
+
+Ping4U 按项目组织 Claude Code、Codex、OpenCode 和终端会话。Agent 与 Shell 运行在你的 **Host 电脑**上，配对后的手机可以发起新任务，也可以继续已有会话。内置可选的 **Routing（模型路由与多账号管理）**，用于为受支持的工具配置账号与模型。
 
 [下载](https://ping4u.cc/downloads) · [官网](https://ping4u.cc/) · [快速开始](docs/getting-started.md) · [English](README.md)
+
+**支持平台：** 桌面 Host 为 macOS / Windows；移动客户端为 iOS / Android。安装方式与可下载版本见[下载页](https://ping4u.cc/downloads)。
 
 ## 看一次实际操作
 
@@ -23,6 +27,8 @@ Ping4U 按项目组织 Claude Code、Codex、OpenCode 和终端会话。Agent �
 3. **打开项目，新建会话。** 可以先发送：`解释这个项目的目录结构，先不要修改文件。`
 4. **需要命令时打开终端。** 在项目中运行 Shell 命令、查看构建输出或执行测试；执行前先确认当前目录。
 5. **需要时从手机继续。** 安装手机 App，在桌面「手机连接」中生成配对码，手机输入后由 Host 确认设备。打开刚才的会话，追加一条指令。
+
+Ping4U 登录用于平台身份认证，并将 Host 与账号关联，中继用量按该关联归属。Agent 登录和模型服务授权仍需分别完成。
 
 已有可用的 Agent 配置，可以直接开始。有账号与模型管理需求时再配置 Routing。[查看完整使用指南 →](docs/getting-started.md)
 

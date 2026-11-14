@@ -4,9 +4,13 @@
 
 **Coding agents and terminals. On your machine. From your desk or your phone.**
 
-Ping4U organizes Claude Code, Codex, OpenCode and terminal sessions by project. Agents and shells run on your **Host computer**. A paired phone lets you start new work or continue an existing session. Optional **Routing** manages account and model connections for supported tools.
+A local agent is working through a task; you do not have to stay at your desk. Step away and use your phone to check progress, send a follow-up or run a command in an authorized terminal—the work still runs on your computer.
+
+Ping4U organizes Claude Code, Codex, OpenCode and terminal sessions by project. Agents and shells run on your **Host computer**. A paired phone lets you start new work or continue an existing session. Built-in, optional **Routing (model routing and multi-account management)** configures account and model connections for supported tools.
 
 [Download](https://ping4u.cc/downloads) · [Website](https://ping4u.cc/) · [Getting started](docs/getting-started.md) · [简体中文](README.zh-CN.md)
+
+**Platforms:** macOS / Windows desktop Hosts; iOS / Android mobile clients. See [Downloads](https://ping4u.cc/downloads) for installation options and available releases.
 
 ## See it in action
 
@@ -23,6 +27,8 @@ The demo moves from a desktop coding session through Routing configuration to a 
 3. **Open a project and create a session.** Try: `Explain this project's directory structure. Do not change files.`
 4. **Open a terminal** in the project when you need shell commands, build output or a test run. Check the working directory before executing commands.
 5. **Continue from your phone, optionally.** Install the mobile app, generate a code in desktop **Phone Connection**, enter it on the phone, and approve the device on the Host. Open the session you just created and send a follow-up.
+
+Signing in authenticates your Ping4U account and associates the Host with it, including attribution of relay usage. Agent sign-in and model-service authorization remain separate.
 
 Already have a working agent configuration? Start there. Configure Routing when you need to manage supported accounts and models. [Full setup guide →](docs/getting-started.md)
 
